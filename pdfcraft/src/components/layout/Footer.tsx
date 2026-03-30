@@ -48,6 +48,12 @@ export const Footer: React.FC<FooterProps> = ({ locale }) => {
             <p className="text-sm text-[hsl(var(--color-muted-foreground))] leading-relaxed max-w-xs">
               {t('tagline') || 'Professional, secure, and free PDF tools for everyone. No installation required.'}
             </p>
+            <a
+              href="mailto:support@xaygo.com"
+              className="text-sm text-[hsl(var(--color-muted-foreground))] hover:text-[hsl(var(--color-primary))] transition-colors"
+            >
+              support@xaygo.com
+            </a>
           </div>
 
           {/* Quick Links */}
