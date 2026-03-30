@@ -2,15 +2,17 @@
 
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { Search, Menu, X, Command, Github } from 'lucide-react';
+import { Search, Menu, X, Command, Github, Sun, Moon } from 'lucide-react';
 import { type Locale } from '@/lib/i18n/config';
 import { Button } from '@/components/ui/Button';
 import { RecentFilesDropdown } from '@/components/common/RecentFilesDropdown';
 import { searchTools, SearchResult } from '@/lib/utils/search';
 import { getToolContent } from '@/config/tool-content';
 import { getAllTools } from '@/config/tools';
+import { useTheme } from '@/components/providers/ThemeProvider';
 
 export interface HeaderProps {
   locale: Locale;
@@ -20,6 +22,7 @@ export interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ locale, showSearch = true }) => {
   const t = useTranslations('common');
   const router = useRouter();
+  const { theme, toggleTheme } = useTheme();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
@@ -157,7 +160,6 @@ export const Header: React.FC<HeaderProps> = ({ locale, showSearch = true }) => 
   const navItems = [
     { href: `/${locale}`, label: t('navigation.home') },
     { href: `/${locale}/tools`, label: t('navigation.tools') },
-    { href: `/${locale}/workflow`, label: t('navigation.workflow') || 'Workflow' },
     { href: `/${locale}/about`, label: t('navigation.about') },
     { href: `/${locale}/faq`, label: t('navigation.faq') },
   ];
@@ -179,20 +181,14 @@ export const Header: React.FC<HeaderProps> = ({ locale, showSearch = true }) => 
               className="group flex items-center gap-2.5 text-xl font-bold text-[hsl(var(--color-foreground))] hover:opacity-90 transition-opacity"
               aria-label={`${t('brand')} - ${t('navigation.home')}`}
             >
-              <div className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[hsl(var(--color-primary))] to-[hsl(var(--color-accent))] shadow-lg shadow-primary/25 transition-transform group-hover:scale-105">
-                <svg
-                  className="h-5 w-5 text-white"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                  <polyline points="14 2 14 8 20 8" />
-                </svg>
-              </div>
+              <Image
+                src="/xay-transparent.png"
+                alt={t('brand')}
+                width={36}
+                height={36}
+                className="rounded-xl transition-transform group-hover:scale-105"
+                priority
+              />
               <span className="text-xl tracking-tight" data-testid="brand-name">
                 {t('brand')}
               </span>
@@ -325,6 +321,19 @@ export const Header: React.FC<HeaderProps> = ({ locale, showSearch = true }) => 
             >
               <Github className="h-5 w-5" aria-hidden="true" />
             </a>
+
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="flex items-center justify-center h-9 w-9 rounded-lg text-[hsl(var(--color-muted-foreground))] hover:text-[hsl(var(--color-foreground))] hover:bg-[hsl(var(--color-muted))/0.5] transition-all"
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {theme === 'dark' ? (
+                <Sun className="h-5 w-5" aria-hidden="true" />
+              ) : (
+                <Moon className="h-5 w-5" aria-hidden="true" />
+              )}
+            </button>
 
             {/* Language Selector placeholder */}
             <div id="language-selector-slot" />
