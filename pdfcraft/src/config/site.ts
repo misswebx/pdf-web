@@ -4,11 +4,11 @@
 export const siteConfig = {
   name: 'PDFCraft',
   description: 'Professional PDF Tools - Free, Private & Browser-Based. Merge, split, compress, convert, and edit PDF files online without uploading to servers.',
-  url: 'https://pdfcraft.devtoolcafe.com',
+  url: 'https://pdf.xaygo.com',
   ogImage: '/images/og-image.png',
   links: {
-    github: 'https://github.com/PDFCraftTool/pdfcraft',
-    twitter: 'https://twitter.com/pdfcraft',
+    github: 'https://github.com/misswebx/pdf-web',
+    twitter: '',
   },
   creator: 'PDFCraft Team',
   keywords: [
