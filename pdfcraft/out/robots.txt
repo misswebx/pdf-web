@@ -15,5 +15,5 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 
-Host: https://pdfcraft.devtoolcafe.com
-Sitemap: https://pdfcraft.devtoolcafe.com/sitemap.xml
+Host: https://pdf.xaygo.com
+Sitemap: https://pdf.xaygo.com/sitemap.xml
