@@ -30,8 +30,9 @@ import { WorkerBrowserConverter } from '@matbee/libreoffice-converter/browser';
 
 const LIBREOFFICE_PATH = '/libreoffice-wasm/';
 const ASSET_VERSION = '20240212-3';
-// Request uncompressed names. In production, nginx gzip_static serves the .gz variant
-// with correct Content-Encoding and MIME headers (required for WebAssembly streaming).
+
+const SOFFICE_REMOTE_URL = 'https://github.com/misswebx/pdf-web/releases/download/v1.0.1';
+
 const SOFFICE_WASM_FILE = 'soffice.wasm';
 const SOFFICE_DATA_FILE = 'soffice.data';
 
@@ -115,8 +116,8 @@ export class LibreOfficeConverter {
 
             this.converter = new WorkerBrowserConverter({
                 sofficeJs: `${this.basePath}soffice.js?v=${ASSET_VERSION}`,
-                sofficeWasm: `${this.basePath}${SOFFICE_WASM_FILE}?v=${ASSET_VERSION}`,
-                sofficeData: `${this.basePath}${SOFFICE_DATA_FILE}?v=${ASSET_VERSION}`,
+                sofficeWasm: `${SOFFICE_REMOTE_URL}/${SOFFICE_WASM_FILE}.gz?v=${ASSET_VERSION}`,
+                sofficeData: `${SOFFICE_REMOTE_URL}/${SOFFICE_DATA_FILE}.gz?v=${ASSET_VERSION}`,
                 sofficeWorkerJs: `${this.basePath}soffice.worker.js?v=${ASSET_VERSION}`,
                 browserWorkerJs: `${this.basePath}browser.worker.global.js?v=${ASSET_VERSION}`,
                 verbose: false,
@@ -195,15 +196,15 @@ export class LibreOfficeConverter {
 
         // 3. Check file connectivity (parallel for speed) & accumulate total size
         const files = [
-            SOFFICE_WASM_FILE,
-            SOFFICE_DATA_FILE,
-            'soffice.js',
-            'soffice.worker.js',
-            'browser.worker.global.js',
+            { name: SOFFICE_WASM_FILE, remoteUrl: `${SOFFICE_REMOTE_URL}/${SOFFICE_WASM_FILE}.gz` },
+            { name: SOFFICE_DATA_FILE, remoteUrl: `${SOFFICE_REMOTE_URL}/${SOFFICE_DATA_FILE}.gz` },
+            { name: 'soffice.js', remoteUrl: null },
+            { name: 'soffice.worker.js', remoteUrl: null },
+            { name: 'browser.worker.global.js', remoteUrl: null },
         ];
         let totalBytes = 0;
         await Promise.all(files.map(async (file) => {
-            const url = `${this.basePath}${file}?v=${ASSET_VERSION}`;
+            const url = file.remoteUrl || `${this.basePath}${file.name}?v=${ASSET_VERSION}`;
             try {
                 const start = performance.now();
                 const res = await fetch(url, { method: 'HEAD' });
