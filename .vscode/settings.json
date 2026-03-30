@@ -1,0 +1,41 @@
+{
+  "editor.fontSize": 16,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.fontFamily": "Monaco",
+  // "files.autoSave": "onFocusChange",
+  "files.eol": "\n", // formatting only supports LF line endings
+  "files.saveConflictResolution": "overwriteFileOnDisk",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "files.associations": {
+    "*.json": "jsonc"
+  },
+  "editor.formatOnSave": true,
+
+  // extension : prettier
+  // "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // go language  settings
+  "go.testFlags": ["-v", "-count=1"],
+  "go.testTimeout": "0",
+  "go.lintFlags": [],
+  "go.lintOnSave": "off", // disable lint
+  "go.formatTool": "goimports",
+  "go.formatFlags": [],
+  "go.useLanguageServer": true,
+  "[go]": {
+    "editor.snippetSuggestions": "none",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "gopls": {
+    "usePlaceholders": true // add parameter placeholders when completing a function
+  },
+
+  "protoc": {
+    "options": ["--proto_path=protos/v3"]
+  }
+}
