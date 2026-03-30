@@ -3,5 +3,17 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 Disallow: /static/
+Disallow: /*.json$
 
+User-Agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+User-Agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+Host: https://pdfcraft.devtoolcafe.com
 Sitemap: https://pdfcraft.devtoolcafe.com/sitemap.xml

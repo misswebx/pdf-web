@@ -23,6 +23,15 @@ export default function RootLayout({
       <head>
         <meta name="color-scheme" content="light dark" />
         <style dangerouslySetInnerHTML={{ __html: 'html{scrollbar-gutter:stable}' }} />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-393YZTJLZ6"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-393YZTJLZ6');
+          `
+        }} />
       </head>
       <body className="min-h-screen bg-background text-foreground antialiased">
         {children}
