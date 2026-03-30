@@ -306,7 +306,7 @@
         "email": {
           "title": "メール",
           "description": "メールをお送りください。24〜48時間以内に返信いたします。",
-          "action": "contact@pdfcraft.app"
+          "action": "support@xaygo.com"
         },
         "github": {
           "title": "GitHub",
@@ -2334,7 +2334,7 @@
       "email": {
         "title": "メール",
         "description": "メールをお送りください。24〜48時間以内に返信いたします。",
-        "action": "contact@pdfcraft.app"
+        "action": "support@xaygo.com"
       },
       "github": {
         "title": "GitHub",

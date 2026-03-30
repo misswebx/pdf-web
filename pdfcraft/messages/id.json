@@ -350,7 +350,7 @@
       "email": {
         "title": "Email",
         "description": "Kirimkan email kepada kami dan kami akan membalas dalam 24-48 jam.",
-        "action": "contact@pdfcraft.app"
+        "action": "support@xaygo.com"
       },
       "github": {
         "title": "GitHub",
@@ -1515,4 +1515,3 @@
     }
   }
 }
-

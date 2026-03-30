@@ -306,7 +306,7 @@
         "email": {
           "title": "E-mail",
           "description": "Envoyez-nous un e-mail et nous vous répondrons dans les 24-48 heures.",
-          "action": "contact@pdfcraft.app"
+          "action": "support@xaygo.com"
         },
         "github": {
           "title": "GitHub",
@@ -2334,7 +2334,7 @@
       "email": {
         "title": "E-mail",
         "description": "Envoyez-nous un e-mail et nous vous répondrons sous 24 à 48 heures.",
-        "action": "contact@pdfcraft.app"
+        "action": "support@xaygo.com"
       },
       "github": {
         "title": "GitHub",
