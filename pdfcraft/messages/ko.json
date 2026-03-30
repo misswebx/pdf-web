@@ -24,6 +24,14 @@
       "title": "문의하기",
       "description": "PDFCraft 팀에 연락하세요. 여러분의 의견을 듣고 싶습니다."
     },
+    "terms": {
+      "title": "서비스 약관",
+      "description": "PDFCraft의 서비스 약관을 읽어보세요. 무료 PDF 도구 사용에 대한 규칙과 지침을 알아보세요."
+    },
+    "cookies": {
+      "title": "쿠키 정책",
+      "description": "PDFCraft가 쿠키를 어떻게 사용하는지 알아보세요. 필수적인 기능을 위한 최소한의 쿠키만 사용합니다."
+    },
     "keywords": {
       "pdfTools": "PDF 도구",
       "mergePdf": "PDF 병합",

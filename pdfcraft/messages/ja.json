@@ -24,6 +24,14 @@
       "title": "お問い合わせ",
       "description": "PDFCraftチームにお問い合わせください。ご意見をお待ちしております。"
     },
+    "terms": {
+      "title": "利用規約",
+      "description": "PDFCraftの利用規約をお読みください。無料PDFツールの使用に関するルールとガイドラインをご確認ください。"
+    },
+    "cookies": {
+      "title": "Cookieポリシー",
+      "description": "PDFCraftがCookieをどのように使用するかをご確認ください。必要な最小限のCookieのみを使用しています。"
+    },
     "keywords": {
       "pdfTools": "PDFツール",
       "mergePdf": "PDF結合",

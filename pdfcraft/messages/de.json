@@ -24,6 +24,14 @@
       "title": "Kontakt",
       "description": "Kontaktieren Sie das PDFCraft-Team. Wir freuen uns auf Ihre Nachricht."
     },
+    "terms": {
+      "title": "Nutzungsbedingungen",
+      "description": "Lesen Sie die Nutzungsbedingungen von PDFCraft. Erfahren Sie die Regeln und Richtlinien für die Nutzung unserer kostenlosen PDF-Werkzeuge."
+    },
+    "cookies": {
+      "title": "Cookie-Richtlinie",
+      "description": "Erfahren Sie, wie PDFCraft Cookies verwendet. Wir verwenden nur minimale Cookies für wesentliche Funktionen."
+    },
     "keywords": {
       "pdfTools": "PDF-Werkzeuge",
       "mergePdf": "PDF zusammenführen",

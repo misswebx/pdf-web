@@ -24,6 +24,14 @@
       "title": "Liên hệ Chúng tôi",
       "description": "Liên hệ với đội ngũ PDFCraft. Chúng tôi rất mong nhận được phản hồi từ bạn."
     },
+    "terms": {
+      "title": "Điều khoản Dịch vụ",
+      "description": "Đọc điều khoản dịch vụ của PDFCraft. Tìm hiểu các quy tắc và hướng dẫn sử dụng công cụ PDF miễn phí của chúng tôi."
+    },
+    "cookies": {
+      "title": "Chính sách Cookie",
+      "description": "Tìm hiểu cách PDFCraft sử dụng cookie. Chúng tôi chỉ sử dụng cookie tối thiểu cho các chức năng cần thiết."
+    },
     "keywords": {
       "pdfTools": "công cụ PDF",
       "mergePdf": "hợp nhất PDF",

@@ -248,6 +248,32 @@ export function generateContactMetadata(locale: Locale, translations?: { title: 
 }
 
 /**
+ * Generate metadata for the terms page
+ */
+export function generateTermsMetadata(locale: Locale, translations?: { title: string; description: string }): Metadata {
+  return generateBaseMetadata({
+    locale,
+    path: '/terms',
+    title: translations?.title || 'Terms of Service',
+    description: translations?.description || `Read the terms of service for ${siteConfig.name}. Learn the rules and guidelines for using our free PDF tools.`,
+    keywords: ['terms', 'terms of service', 'legal', 'user agreement'],
+  });
+}
+
+/**
+ * Generate metadata for the cookies page
+ */
+export function generateCookiesMetadata(locale: Locale, translations?: { title: string; description: string }): Metadata {
+  return generateBaseMetadata({
+    locale,
+    path: '/cookies',
+    title: translations?.title || 'Cookie Policy',
+    description: translations?.description || `Learn about how ${siteConfig.name} uses cookies. We use minimal cookies for essential functionality only.`,
+    keywords: ['cookies', 'cookie policy', 'privacy', 'browser storage'],
+  });
+}
+
+/**
  * Convert locale to Open Graph locale format
  */
 export function getOpenGraphLocale(locale: Locale): string {

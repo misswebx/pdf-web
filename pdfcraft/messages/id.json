@@ -24,6 +24,14 @@
       "title": "Hubungi Kami",
       "description": "Hubungi tim PDFCraft. Kami ingin mendengar pendapat Anda."
     },
+    "terms": {
+      "title": "Ketentuan Layanan",
+      "description": "Baca ketentuan layanan PDFCraft. Pelajari aturan dan pedoman penggunaan alat PDF gratis kami."
+    },
+    "cookies": {
+      "title": "Kebijakan Cookie",
+      "description": "Pelajari bagaimana PDFCraft menggunakan cookie. Kami hanya menggunakan cookie minimal untuk fungsionalitas penting."
+    },
     "keywords": {
       "pdfTools": "alat PDF",
       "mergePdf": "gabung PDF",

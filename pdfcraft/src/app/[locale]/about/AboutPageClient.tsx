@@ -150,6 +150,40 @@ export default function AboutPageClient({ locale }: AboutPageClientProps) {
           </div>
         </section>
 
+        {/* Attribution */}
+        <section className="py-12 bg-[hsl(var(--color-muted)/0.3)]">
+          <div className="container mx-auto px-4">
+            <div className="max-w-2xl mx-auto text-center">
+              <div className="bg-[hsl(var(--color-card))] p-6 rounded-xl border border-[hsl(var(--color-border))]">
+                <p className="text-sm text-[hsl(var(--color-muted-foreground))]">
+                  This website is based on{' '}
+                  <a
+                    href="https://github.com/PDFCraftTool/pdfcraft"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[hsl(var(--color-primary))] hover:underline font-medium"
+                  >
+                    PDFCraft
+                  </a>
+                  , Copyright (c) 2026 PDFCraft.
+                </p>
+                <p className="text-sm text-[hsl(var(--color-muted-foreground))] mt-2">
+                  Source code is available under AGPL v3 at{' '}
+                  <a
+                    href="https://github.com/misswebx/pdf-web"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[hsl(var(--color-primary))] hover:underline font-medium"
+                  >
+                    GitHub
+                  </a>
+                  .
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-16 bg-[hsl(var(--color-primary)/0.05)]">
           <div className="container mx-auto px-4">

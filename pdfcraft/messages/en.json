@@ -24,6 +24,14 @@
       "title": "Contact Us",
       "description": "Get in touch with PDFCraft team. We'd love to hear from you."
     },
+    "terms": {
+      "title": "Terms of Service",
+      "description": "Read the terms of service for PDFCraft. Learn the rules and guidelines for using our free PDF tools."
+    },
+    "cookies": {
+      "title": "Cookie Policy",
+      "description": "Learn about how PDFCraft uses cookies. We use minimal cookies for essential functionality only."
+    },
     "keywords": {
       "pdfTools": "PDF tools",
       "mergePdf": "merge PDF",

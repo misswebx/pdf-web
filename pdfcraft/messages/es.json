@@ -24,6 +24,14 @@
       "title": "Contáctanos",
       "description": "Ponte en contacto con el equipo de PDFCraft. Nos encantaría saber de ti."
     },
+    "terms": {
+      "title": "Términos de Servicio",
+      "description": "Lee los términos de servicio de PDFCraft. Conoce las reglas y directrices para usar nuestras herramientas PDF gratuitas."
+    },
+    "cookies": {
+      "title": "Política de Cookies",
+      "description": "Conoce cómo PDFCraft utiliza las cookies. Solo usamos cookies mínimas para funcionalidad esencial."
+    },
     "keywords": {
       "pdfTools": "herramientas PDF",
       "mergePdf": "combinar PDF",

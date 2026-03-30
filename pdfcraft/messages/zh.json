@@ -24,6 +24,14 @@
       "title": "联系我们",
       "description": "联系 PDFCraft 团队。我们很乐意听取您的意见。"
     },
+    "terms": {
+      "title": "服务条款",
+      "description": "阅读 PDFCraft 的服务条款。了解使用我们免费 PDF 工具的规则和指南。"
+    },
+    "cookies": {
+      "title": "Cookie 政策",
+      "description": "了解 PDFCraft 如何使用 Cookie。我们仅使用必要的最小 Cookie。"
+    },
     "keywords": {
       "pdfTools": "PDF 工具",
       "mergePdf": "合并 PDF",
